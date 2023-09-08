@@ -1,0 +1,15 @@
+export const dorkTypes = [
+  "intitle",
+  "inurl",
+  "intext",
+  "site",
+  "define",
+  "phonebook",
+  "maps",
+  "book",
+  "info",
+  "movie",
+  "weather",
+  "related",
+  "link",
+];

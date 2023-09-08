@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Google Dork Search Webpage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React web application that allows you to create Google search queries using various Google dork types. It provides a user-friendly interface.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add Google dorks with different types such as intitle, inurl, intext etc.
+- Generate a URL based on the selected dorks.
+- Open the generated URL in a new tab for performing a Google search.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone this repository to your local machine:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```bash
+   git clone https://github.com/Shariar-Hasan/Dork-IT
+   ```
 
-### `npm test`
+2. Navigate to the project directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   cd google-dork-search-webpage
+   ```
 
-### `npm run build`
+3. Install the required dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+5. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to use the Google Dork Search webpage.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. On the left side of the webpage, you can enter Google dorks using the form.
+2. Select a dork type from the dropdown list (e.g., intitle, inurl, etc.).
+3. Enter your Google dork query in the text input field.
+4. Click the "Add Dork in URL" button to add the dork to the URL.
+5. The generated URL will be displayed on the right side of the webpage.
+6. If you've added at least one dork, a "Search" button will appear. Click it to open the URL in a new tab and perform a Google search.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React: [https://reactjs.org/](https://reactjs.org/)
+- React Hook Form: [https://react-hook-form.com/](https://react-hook-form.com/)
+- DaisyUI: [https://daisyui.com/](https://daisyui.com/)
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can include this README file in the root directory of your project and customize it further to provide more information about your project as needed.
+```
