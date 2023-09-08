@@ -1,4 +1,4 @@
-# Google Dork Search Webpage
+# Dork IT
 
 This is a simple React web application that allows you to create Google search queries using various Google dork types. It provides a user-friendly interface.
 
@@ -10,16 +10,18 @@ This is a simple React web application that allows you to create Google search q
 
 ## Getting Started
 
+Use the site in [Dork IT Website](https://dorkit.netlify.app/) or follow the instructions :
+
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/Shariar-Hasan/Dork-IT
+   git clone https://github.com/Shariar-Hasan/Dork-IT.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd google-dork-search-webpage
+   cd Dork-IT
    ```
 
 3. Install the required dependencies:
@@ -38,24 +40,10 @@ This is a simple React web application that allows you to create Google search q
 
 ## Usage
 
-1. On the left side of the webpage, you can enter Google dorks using the form.
-2. Select a dork type from the dropdown list (e.g., intitle, inurl, etc.).
-3. Enter your Google dork query in the text input field.
-4. Click the "Add Dork in URL" button to add the dork to the URL.
-5. The generated URL will be displayed on the right side of the webpage.
-6. If you've added at least one dork, a "Search" button will appear. Click it to open the URL in a new tab and perform a Google search.
+1. Select a dork type from the dropdown list (e.g., intitle, inurl, etc.).
+2. Enter your Google dork query in the text input field.
+3. Click the "Add Dork in URL" button to add the dork to the URL.
+4. The generated URL will be displayed on the right side of the webpage.
+5. Click Search Button to open the URL in a new tab and perform a Google search.
 
-## Dependencies
-
-- React: [https://reactjs.org/](https://reactjs.org/)
-- React Hook Form: [https://react-hook-form.com/](https://react-hook-form.com/)
-- DaisyUI: [https://daisyui.com/](https://daisyui.com/)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-
-You can include this README file in the root directory of your project and customize it further to provide more information about your project as needed.
-```
+<h3 align="center">Happy Dorking!!</h3>

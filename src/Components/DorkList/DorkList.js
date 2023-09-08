@@ -8,7 +8,16 @@ const DorkList = ({ dorks = [], handleSearch, setDorks }) => {
 
         {dorks.length > 0 ? (
           <>
-            <p className="bg-gray-900 p-6 rounded my-7">{dorks.join(" ")}</p>
+            <p className="bg-gray-900 p-4 rounded join-item w-full text-justify flex flex-wrap my-5">
+              {dorks.map((dork, i) => (
+                <span
+                  key={i}
+                  className="py-1 px-2 font-semibold rounded mr-1 my-1 bg-success text-black"
+                >
+                  {dork}
+                </span>
+              ))}
+            </p>
             <div className="grid grid-cols-6 gap-3">
               <button
                 onClick={handleSearch}
