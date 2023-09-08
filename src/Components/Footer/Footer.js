@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="text-center text-gray-100 mt-10">
+    <div className="text-center text-gray-100 my-10">
       <p>
         If You Dont Know About Google Dorking, then{" "}
         <a

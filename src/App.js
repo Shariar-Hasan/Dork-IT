@@ -32,10 +32,10 @@ function App() {
       <Heading text={"Dork it"} />
       <div className="container mx-auto">
         <div className="grid grid-cols-2 gap-4">
-          <div className="col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <DorkForm addDork={addDork} />
           </div>
-          <div className="col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <DorkList
               dorks={dorks}
               handleSearch={handleSearch}
