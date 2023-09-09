@@ -5,7 +5,7 @@ const Accordion = ({ title, content, img }) => {
     <div className="collapse collapse-plus bg-dark-f text-dark">
       <input type="radio" name="accordion" />
       <div className="collapse-title text-xl font-bold border-b border-b-success">
-        How to use
+        How to use{" "}
         {title.charAt(0).toUpperCase() + title.slice(1, title.length - 1)}
       </div>
       <div className="collapse-content">
