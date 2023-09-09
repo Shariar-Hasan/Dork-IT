@@ -5,3 +5,12 @@
 .box {
   @apply p-5 bg-gray-700 text-gray-200 shadow-lg rounded-lg;
 }
+.bg-dark-f {
+  @apply dark:bg-gray-800 bg-gray-50;
+}
+.bg-dark {
+  @apply dark:bg-gray-900 bg-white;
+}
+.text-dark {
+  @apply dark:text-gray-200 text-gray-950;
+}

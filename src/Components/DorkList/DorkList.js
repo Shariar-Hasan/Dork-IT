@@ -1,21 +1,59 @@
 import React from "react";
+import toast from "react-hot-toast";
+import Swal from "sweetalert2";
+import { useSiteData } from "../../Contexts/useSiteData";
 
-const DorkList = ({ dorks = [], handleSearch, setDorks }) => {
+const DorkList = ({ dorks = [], setDorks }) => {
+  const { handleSearch } = useSiteData();
+  const deleteDorkFromList = (key) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Delete",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const newDorks = dorks.filter((dork, i) => i !== key);
+        console.log({ key, newDorks });
+        setDorks(newDorks);
+        toast.success(
+          (key === 0
+            ? "1st"
+            : key === 1
+            ? "2nd"
+            : key === 2
+            ? "3rd"
+            : ++key + "th") + " Dork has been deleted"
+        );
+      }
+    });
+  };
   return (
     <div className="space-y-2">
       <div className="box">
-        <h4 className="text-xl my-3 font-bold">Generated Dork URL:</h4>
+        <h4 className="text-xl my-3 font-bold">
+          Generated Dork URL: <span className="text-xs">(Click to Delete)</span>
+        </h4>
 
         {dorks.length > 0 ? (
           <>
             <p className="bg-gray-900 p-4 rounded join-item w-full text-justify flex flex-wrap my-5">
               {dorks.map((dork, i) => (
-                <span
+                <button
                   key={i}
-                  className="py-1 px-2 font-semibold rounded mr-1 my-1 bg-success text-black"
+                  onClick={() => deleteDorkFromList(i)}
+                  title="Click to Delete"
+                  className="relative py-1 px-2 font-semibold rounded mr-5 my-1 bg-success text-black hover:scale-110 duration-200 cursor-pointer group"
                 >
+                  <span className="absolute top-0 left-0 bg-black w-full h-full group-hover:opacity-70 opacity-0 duration-200"></span>
+                  <span className="absolute  left-0 right-0 text-center opacity-0 group-hover:opacity-100 duration-300 transition-all text-gray-100">
+                    <i class="fa fa-trash text-xs " aria-hidden="true"></i>
+                  </span>
                   {dork}
-                </span>
+                </button>
               ))}
             </p>
             <div className="grid grid-cols-6 gap-3">
