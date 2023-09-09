@@ -46,6 +46,7 @@ const Navbar = () => {
                 <a
                   href="https://github.com/Shariar-Hasan/Dork-IT"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i class="fa fa-star" aria-hidden="true"></i>
                   Star my Work
@@ -92,6 +93,7 @@ const Navbar = () => {
               <a
                 href="https://github.com/Shariar-Hasan/Dork-IT"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i class="fa fa-star" aria-hidden="true"></i>
                 Star my Work

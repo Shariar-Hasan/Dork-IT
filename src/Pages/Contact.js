@@ -26,6 +26,8 @@ const Contact = () => {
             <p className="text-dark">Feel free to reach out via github.</p>
             <a
               href={contacts.github.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-500 hover:underline"
             >
               {contacts.github.name}

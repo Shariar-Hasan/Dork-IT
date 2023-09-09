@@ -2,12 +2,10 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { dorkTypes } from "../../Configs/htmlConfigs";
 import toast from "react-hot-toast";
-import { useSiteData } from "../../Contexts/useSiteData";
 import { Link } from "react-router-dom";
 
 const DorkForm = ({ addDork }) => {
   const { register, handleSubmit, reset } = useForm();
-  const { dorks, setDorks } = useSiteData();
   const onSubmit = (data) => {
     if (data.dorkText === "") {
       toast.error("You must Enter any text to Add Dork");
