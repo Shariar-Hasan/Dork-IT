@@ -1,24 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const Accordion = ({ title, content }) => {
+const Accordion = ({ title, content, img }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  useEffect(() => {
+    console.log("changed");
+  }, [isOpen]);
   return (
-    <div className="border-b pb-2">
-      <button
-        onClick={() => setIsOpen((prev) => !prev)}
-        className="text-blue-500 hover:text-blue-700 focus:outline-none"
-      >
-        {title}
-        <span
-          className={`ml-2 ${
-            isOpen ? "rotate-0" : "rotate-180"
-          } transition-transform inline-block`}
-        >
-          ▼
-        </span>
-      </button>
-      {isOpen && <p className="ml-4 mt-2">{content}</p>}
+    <div className="collapse collapse-plus bg-dark-f text-dark">
+      <input type="radio" name="accordion" />
+      <div className="collapse-title text-xl font-bold border-b border-b-success">
+        How to use {title.slice(0, title.length - 1)}
+      </div>
+      <div className="collapse-content">
+        <p className="p-7 text-justify font-mono font-bold">{content}</p>
+        <img className="w-full md:w-1/2 mx-auto" src={img} alt={title} />
+      </div>
     </div>
   );
 };

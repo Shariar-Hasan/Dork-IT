@@ -1,10 +1,8 @@
 import React from "react";
-import { dorkTypes } from "../Configs/htmlConfigs";
 import Accordion from "../Components/Accordion/Accordion";
+import { dorkTypesInfo } from "./../Configs/dorkTypeInfo";
 
 const About = () => {
- 
-
   return (
     <div className="container mx-auto mt-6 p-4">
       <h1 className="text-3xl font-semibold mb-4">About Google Dorks</h1>
@@ -26,18 +24,23 @@ const About = () => {
         <li>
           Enter your desired search query or keyword following the dork type.
         </li>
-        <li>Combine multiple dorks to refine your search even further.</li>
+        <li>Combine multiple dorks to refine your search even better.</li>
         <li>
           Click the "Search" button to execute your query and view the results.
         </li>
       </ol>
 
       <h2 className="text-xl font-semibold mt-4 mb-2">
-        Meaning of Each Dork Type
+        How to use these Dorks
       </h2>
       <div className="space-y-2 mb-4">
-        {dorkTypes.map((dork, index) => (
-          <Accordion key={index} title={dork.title} content={dork.content} />
+        {dorkTypesInfo.map((dork, index) => (
+          <Accordion
+            key={index}
+            title={dork.title}
+            content={dork.content}
+            img={dork.img}
+          />
         ))}
       </div>
 

@@ -13,3 +13,15 @@ export const dorkTypes = [
   "related",
   "link",
 ];
+export const contacts = {
+  name: "Shariar Hasan",
+  github: {
+    name: "Shariar Hasan",
+    link: "https://github.com/Shariar-Hasan",
+  },
+
+  repository: {
+    name: "Dork IT",
+    link: "https://github.com/Shariar-Hasan/Dork-IT",
+  },
+};

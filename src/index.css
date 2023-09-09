@@ -2,14 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply text-dark bg-dark h-full;
+}
+body {
+  @apply text-dark bg-dark h-full;
+}
+div#root {
+  @apply text-dark bg-dark;
+}
 .box {
-  @apply p-5 bg-gray-700 text-gray-200 shadow-lg rounded-lg;
+  @apply p-5 bg-dark-f text-dark shadow-lg rounded-lg;
+}
+.box-border {
+  @apply border border-success;
 }
 .bg-dark-f {
-  @apply dark:bg-gray-800 bg-gray-50;
+  @apply dark:bg-gray-800 bg-slate-200;
 }
 .bg-dark {
-  @apply dark:bg-gray-900 bg-white;
+  @apply dark:bg-gray-900 bg-gray-50;
 }
 .text-dark {
   @apply dark:text-gray-200 text-gray-950;

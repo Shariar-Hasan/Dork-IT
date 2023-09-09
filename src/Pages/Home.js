@@ -2,18 +2,23 @@ import React from "react";
 import DorkForm from "../Components/DorkForm/DorkForm";
 import DorkList from "../Components/DorkList/DorkList";
 import { useSiteData } from "../Contexts/useSiteData";
-import Heading from './../Components/Heading/Heading';
+import Heading from "./../Components/Heading/Heading";
 
 const Home = () => {
   const { dorks, setDorks, handleSearch } = useSiteData();
   const addDork = (data) => {
-    const { dorkType, dorkText } = data;
+    let { dorkType, dorkText } = data;
     if (dorkText.trim() !== "") {
-      setDorks([...dorks, `${dorkType}:${dorkText}`]);
+      if (dorkText.split(" ").length > 1) {
+        dorkText = `"${dorkText}"`;
+      }
+      const newDork = `${dorkType}:${dorkText}`;
+      setDorks([...dorks, newDork]);
+      console.log({ newDork, dorks });
     }
   };
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mb-20">
       <Heading text={"Dork it"} />
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2 md:col-span-1">

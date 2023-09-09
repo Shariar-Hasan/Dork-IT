@@ -14,15 +14,15 @@ export const SiteDataProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("theme", isDark);
     if (isDark) {
-      document.querySelector("body").classList.add("dark");
+      document.querySelector("html").classList.add("dark");
     } else {
-      document.querySelector("body").classList.remove("dark");
+      document.querySelector("html").classList.remove("dark");
     }
   }, [isDark]);
 
   // all user defined functions
   const handleSearch = () => {
-    if (dorks.length == 0) {
+    if (dorks.length === 0) {
       toast.error("Dork is Empty");
       return;
     }

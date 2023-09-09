@@ -33,14 +33,14 @@ const DorkList = ({ dorks = [], setDorks }) => {
   };
   return (
     <div className="space-y-2">
-      <div className="box">
+      <div className="box box-border">
         <h4 className="text-xl my-3 font-bold">
           Generated Dork URL: <span className="text-xs">(Click to Delete)</span>
         </h4>
 
         {dorks.length > 0 ? (
           <>
-            <p className="bg-gray-900 p-4 rounded join-item w-full text-justify flex flex-wrap my-5">
+            <p className="bg-dark p-4 rounded join-item w-full text-justify flex flex-wrap my-5">
               {dorks.map((dork, i) => (
                 <button
                   key={i}
@@ -50,7 +50,7 @@ const DorkList = ({ dorks = [], setDorks }) => {
                 >
                   <span className="absolute top-0 left-0 bg-black w-full h-full group-hover:opacity-70 opacity-0 duration-200"></span>
                   <span className="absolute  left-0 right-0 text-center opacity-0 group-hover:opacity-100 duration-300 transition-all text-gray-100">
-                    <i class="fa fa-trash text-xs " aria-hidden="true"></i>
+                    <i className="fa fa-trash text-xs " aria-hidden="true"></i>
                   </span>
                   {dork}
                 </button>
@@ -72,7 +72,7 @@ const DorkList = ({ dorks = [], setDorks }) => {
             </div>
           </>
         ) : (
-          <p className="bg-gray-900 text-red-700 text-center p-6 rounded my-7">
+          <p className="bg-dark text-red-700 text-center p-6 rounded my-7">
             No Dork Created Yet
           </p>
         )}

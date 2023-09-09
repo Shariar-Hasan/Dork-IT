@@ -2,15 +2,18 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="text-center text-gray-100 my-10">
+    <div className="text-center text-dark bg-dark-f py-5 mt-10">
+
       <p>
-        If You Dont Know About Google Dorking, then{" "}
+        © Copyright {new Date().getFullYear()} ||{" "}
         <a
-          className="text-blue-500"
-          href="https://en.wikipedia.org/wiki/Google_hacking"
+          className="italic text-blue-500"
+          href="https://github.com/Shariar-Hasan"
         >
-          READ THIS
-        </a>
+          Ethico
+        </a>{" "}
+        || Made with Love{" "}
+        <i className="fa fa-heart text-red-600" aria-hidden="true"></i>
       </p>
     </div>
   );

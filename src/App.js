@@ -8,7 +8,7 @@ import { routes } from "./Configs/routeConfigs";
 
 function App() {
   return (
-    <div className="">
+    <>
       <Toaster position="top-right" reverseOrder={false} />
       <Navbar />
       <Routes>
@@ -17,7 +17,7 @@ function App() {
         ))}
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
