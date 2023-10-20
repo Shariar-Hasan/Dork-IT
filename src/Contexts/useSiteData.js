@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { store } from "../Assets/store";
 
 const SiteContext = createContext();
 
@@ -8,7 +9,7 @@ export const useSiteData = () => useContext(SiteContext);
 export const SiteDataProvider = ({ children }) => {
   // all states
   const [isDark, setIsDark] = useState(localStorage.getItem("theme") || true);
-  const [dorks, setDorks] = useState([]);
+  const [dorks, setDorks] = useState(store.get() || []);
 
   // all mounting functions
   useEffect(() => {

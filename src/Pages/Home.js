@@ -3,7 +3,7 @@ import DorkForm from "../Components/DorkForm/DorkForm";
 import DorkList from "../Components/DorkList/DorkList";
 import { useSiteData } from "../Contexts/useSiteData";
 import Heading from "./../Components/Heading/Heading";
-
+import { store } from "./../Assets/store";
 const Home = () => {
   const { dorks, setDorks, handleSearch } = useSiteData();
   const addDork = (data) => {
@@ -13,8 +13,8 @@ const Home = () => {
         dorkText = `"${dorkText}"`;
       }
       const newDork = `${dorkType}:${dorkText}`;
-      setDorks([...dorks, newDork]);
-      console.log({ newDork, dorks });
+      const newDorkData = store.push({ dork: newDork });
+      setDorks([...dorks, newDorkData]);
     }
   };
   return (

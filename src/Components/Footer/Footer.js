@@ -7,7 +7,7 @@ const Footer = () => {
       <p>
         © Copyright {new Date().getFullYear()} ||{" "}
         <a
-          className="italic text-blue-500"
+          className="text-mono text-blue-500"
           href="https://github.com/Shariar-Hasan"
         >
           Ethico
