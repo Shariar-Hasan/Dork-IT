@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactCard = ({ cnt }) => {
   return (
-    <div className="card bg-dark p-3 box-border grid md:grid-cols-4 sm:grid-cols-1 grid-cols-4">
+    <div className="card bg-dark-f px-3 py-5 box-border grid md:grid-cols-4 sm:grid-cols-1 grid-cols-4">
       <div className="col-span-1 flex justify-center items-center text-4xl text-center ">
         {cnt.icon}
       </div>
