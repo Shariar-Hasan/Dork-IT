@@ -57,7 +57,10 @@ const DorkList = ({ dorks = [], setDorks }) => {
                 Search on Google 🔍
               </button>
               <button
-                onClick={() => setDorks([])}
+                onClick={() => {
+                  setDorks([]);
+                  store.remove();
+                }}
                 className="col-span-1 text-white rounded py-2 px-4  btn  btn-success btn-block mx-auto"
               >
                 ❌

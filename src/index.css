@@ -5,7 +5,7 @@
 html {
   @apply text-dark bg-dark h-full;
 }
-body {
+body::after {
   @apply text-dark bg-dark h-full;
 }
 div#root {
