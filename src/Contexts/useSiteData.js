@@ -27,7 +27,7 @@ export const SiteDataProvider = ({ children }) => {
       toast.error("Dork is Empty");
       return;
     }
-    const googleDork = dorks.join(" ");
+    const googleDork = dorks.map((drk) => drk.dork).join(" ");
     const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(
       googleDork
     )}`;
