@@ -1,17 +1,65 @@
 export const dorkTypes = [
-  "intitle",
-  "inurl",
-  "intext",
-  "site",
-  "define",
-  "phonebook",
-  "maps",
-  "book",
-  "info",
-  "movie",
-  "weather",
-  "related",
-  "link",
+  {
+    title: "Search in website Title",
+    value: "intitle",
+  },
+  {
+    title: "Search in website URL",
+    value: "inurl",
+  },
+  {
+    title: "Search in website Text",
+    value: "intext",
+  },
+  {
+    title: "Search Site domain / sub domain",
+    value: "site",
+  },
+  {
+    title: "Search definations",
+    value: "define",
+  },
+  // next time create for this
+  // "",
+  // "",
+  // "",
+  // "",
+  // "",
+  // "",
+  // "",
+  // "",
+  {
+    title: "Search in phonebooks",
+    value: "phonebook",
+  },
+  {
+    title: "Search in Maps",
+    value: "maps",
+  },
+  {
+    title: "Search in book",
+    value: "book",
+  },
+  {
+    title: "Search details information",
+    value: "info",
+  },
+  {
+    title: "Search by Movie Name",
+    value: "movie",
+  },
+  {
+    title: "Search Weather Condition",
+    value: "weather",
+  },
+  {
+    title: "Search related topics",
+    value: "related",
+  },
+  {
+    title: "Search any links",
+    value: "link",
+  },
 ];
 export const contacts = [
   {

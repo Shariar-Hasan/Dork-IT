@@ -48,8 +48,8 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  Star my Work
+                  <i class="fa fa-star text-yellow-500" aria-hidden="true"></i>
+                  Star my Work 
                 </a>
               </li>
               <li className="mx-2  flex align-center">
@@ -95,7 +95,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star text-yellow-500" aria-hidden="true"></i>
                 Star my Work
               </a>
             </li>

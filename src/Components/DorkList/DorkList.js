@@ -52,7 +52,7 @@ const DorkList = ({ dorks = [], setDorks }) => {
             <div className="grid grid-cols-6 gap-3">
               <button
                 onClick={handleSearch}
-                className="col-span-5 text-white rounded py-2 px-4  btn  btn-success btn-block mx-auto"
+                className="col-span-4 text-white rounded py-2 px-4  btn  btn-success btn-block mx-auto"
               >
                 Search on Google 🔍
               </button>
@@ -61,9 +61,9 @@ const DorkList = ({ dorks = [], setDorks }) => {
                   setDorks([]);
                   store.remove();
                 }}
-                className="col-span-1 text-white rounded py-2 px-4  btn  btn-success btn-block mx-auto"
+                className="col-span-2 text-white rounded py-2 px-4  btn  btn-success btn-block mx-auto"
               >
-                ❌
+                Clear Data ❌
               </button>
             </div>
           </>

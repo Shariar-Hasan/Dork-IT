@@ -1,6 +1,7 @@
 # Dork IT
 
 This is a simple React web application that allows you to create Google search queries using various Google dork types. It provides a user-friendly interface.
+![Website View](./src/Assets/web.png)
 
 ## Features
 

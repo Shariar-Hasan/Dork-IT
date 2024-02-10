@@ -10,7 +10,7 @@ const Footer = () => {
           className="text-mono text-blue-500"
           href="https://github.com/Shariar-Hasan"
         >
-          Ethico
+          Shariar Hasan
         </a>{" "}
         || Made with Love{" "}
         <i className="fa fa-heart text-red-600" aria-hidden="true"></i>

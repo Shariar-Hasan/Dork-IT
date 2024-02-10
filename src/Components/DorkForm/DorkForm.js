@@ -24,9 +24,9 @@ const DorkForm = ({ addDork }) => {
             {...register("dorkType")}
             className="select select-success w-full my-3  bg-dark text-dark"
           >
-            {dorkTypes.map((type, i) => (
-              <option key={i} value={type}>
-                {type.toUpperCase()}
+            {dorkTypes.map(({ title, value }, i) => (
+              <option key={i} value={value}>
+                {title}
               </option>
             ))}
           </select>
@@ -45,7 +45,11 @@ const DorkForm = ({ addDork }) => {
         </button>
       </form>
       <p className="my-3 text-center">
-        Visit <Link className="text-cyan-500" to={"/about"}>About</Link> to know about Google Dork
+        Visit{" "}
+        <Link className="text-cyan-500" to={"/about"}>
+          About
+        </Link>{" "}
+        to know about Google Dork
       </p>
     </div>
   );
