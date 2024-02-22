@@ -1,8 +1,12 @@
 # Dork IT
 
 This is a simple Open Source React web application that allows you to create Google search queries using various Google dork types. It provides a user-friendly interface.
-![Website View](./src/Assets/web.png)
 
+<div align="center">
+
+![Website View](https://s9.gifyu.com/images/SFv0S.gif)
+
+</div>
 ## Features
 
 - Add Google dorks with different types such as intitle, inurl, intext etc.
