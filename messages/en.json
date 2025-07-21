@@ -1,0 +1,155 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "homepage": {
+        "title": "Dork IT",
+        "subtitle": "Unleash the {potentialSpan} of Google search with our {professionalSpan} dork builder. Create {precisionSpan} queries that reveal hidden insights.",
+        "potentialText": "full potential",
+        "professionalText": "professional-grade",
+        "precisionText": "surgical precision",
+        "features": {
+            "lightningFast": "Lightning Fast",
+            "securityFocused": "Security Focused",
+            "educational": "Educational",
+            "precisionTargeting": "Precision Targeting"
+        },
+        "whyChoose": {
+            "title": "Why Choose Dork IT?",
+            "subtitle": "Revolutionary features engineered for security researchers, ethical hackers, and digital investigators",
+            "lightningPerformance": {
+                "title": "Lightning Performance",
+                "description": "Build complex queries instantly with our AI-powered interface and smart auto-completion that learns from your patterns."
+            },
+            "ethicalFramework": {
+                "title": "Ethical Framework",
+                "description": "Master responsible disclosure and ethical hacking techniques with comprehensive guides and industry best practices."
+            },
+            "advancedIntelligence": {
+                "title": "Advanced Intelligence",
+                "description": "Leverage machine learning algorithms to discover hidden patterns and generate sophisticated query combinations."
+            }
+        },
+        "cta": {
+            "exploreAdvanced": "Explore Advanced Techniques",
+            "joinCommunity": "Join Our Community"
+        },
+        "loading": {
+            "text": "Loading your dork queries..."
+        }
+    },
+    "dorkForm": {
+        "title": "Dork Builder",
+        "description": "Create powerful Google dork queries with our intuitive builder",
+        "dorkType": "Dork Type",
+        "searchQuery": "Search Query",
+        "placeholder": "Enter your search term...",
+        "addButton": "Add Dork Query",
+        "helpText": "Need help understanding Google dorks?",
+        "helpLink": "Visit our comprehensive guide →",
+        "validation": {
+            "textRequired": "You must enter text to create a dork query"
+        },
+        "success": "Dork query added successfully!"
+    },
+    "dorkList": {
+        "title": "Dork Queries ({count})",
+        "description": "Your constructed Google dork queries ready for search",
+        "empty": {
+            "title": "No dork queries yet",
+            "description": "Create your first dork query using the form on the left to get started with advanced Google searching.",
+            "startBuilding": "Start building queries"
+        },
+        "combinedQuery": "Combined Search Query:",
+        "searchButton": "Search with Google",
+        "copyButton": "Copy dork",
+        "removeButton": "Remove dork",
+        "copied": "Dork copied to clipboard!",
+        "searchError": "Please add at least one dork query before searching"
+    },
+    "about": {
+        "title": "About Google Dorks",
+        "subtitle": "Master the art of advanced Google searching with powerful operators that unlock hidden information and enhance your research capabilities.",
+        "whatAre": {
+            "title": "What are Google Dorks?",
+            "description": "{strongText}, also known as Google hacking, refers to the use of advanced search operators in Google to find specific information that might not be easily accessible through regular searches. These powerful operators allow you to search for specific file types, websites, or text patterns with surgical precision.",
+            "strongText": "Google Dorks",
+            "warning": {
+                "title": "Important:",
+                "text": "While Google dorking can be used for legitimate research and security testing purposes, it's crucial to use these techniques responsibly and ethically. Always respect website terms of service and privacy policies."
+            }
+        },
+        "operators": {
+            "title": "Google Dork Operators",
+            "subtitle": "Explore the powerful search operators at your disposal"
+        },
+        "bestPractices": {
+            "title": "Best Practices & Ethics",
+            "subtitle": "Guidelines for responsible use of Google dorking techniques",
+            "practices": [
+                "Use for legitimate research and educational purposes only",
+                "Respect website terms of service and robots.txt files",
+                "Do not attempt to access unauthorized information",
+                "Use for security testing only on systems you own or have permission to test",
+                "Be mindful of the privacy and security of others"
+            ]
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "Have questions about Google dorking or need help with the tool? We'd love to hear from you and help you master advanced search techniques!",
+        "github": {
+            "title": "GitHub",
+            "description": "Check out the source code and contribute to the project",
+            "button": "View Repository"
+        },
+        "email": {
+            "title": "Email",
+            "description": "Send us your questions, feedback, or suggestions"
+        },
+        "documentation": {
+            "title": "Documentation",
+            "description": "Learn more about Google dorking techniques and best practices",
+            "button": "Read the Guide"
+        },
+        "about": {
+            "title": "About This Project",
+            "subtitle": "Dork IT is an educational tool designed to help security researchers and students master Google dorking techniques.",
+            "description": "This tool is built with cutting-edge technologies including Next.js, TypeScript, and shadcn/ui to provide a modern, intuitive interface for constructing Google dork queries. It's designed specifically for educational purposes and ethical security research.",
+            "features": {
+                "openSource": {
+                    "title": "Open Source",
+                    "description": "Free and open to the community"
+                },
+                "educational": {
+                    "title": "Educational",
+                    "description": "Learn advanced search techniques"
+                },
+                "ethicalUse": {
+                    "title": "Ethical Use",
+                    "description": "Responsible security research"
+                }
+            }
+        }
+    },
+    "dorkTypes": {
+        "intext": "Search for specific text within web pages",
+        "intitle": "Find pages with specific words in the title",
+        "inurl": "Search for specific words in URL paths",
+        "site": "Restrict search to a specific website or domain",
+        "filetype": "Search for specific file types or extensions",
+        "related": "Find websites related to a specific URL",
+        "link": "Find pages that link to a specific URL",
+        "cache": "View Google's cached version of a webpage",
+        "info": "Get information about a specific webpage",
+        "define": "Get definitions of words or phrases",
+        "weather": "Get weather information for a location",
+        "stocks": "Get stock information for a company",
+        "movie": "Get movie information and showtimes",
+        "maps": "Search for locations on Google Maps",
+        "book": "Search for books and publications",
+        "phonebook": "Search for phone numbers and addresses"
+    }
+}
