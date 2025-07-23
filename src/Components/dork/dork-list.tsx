@@ -4,16 +4,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dork } from "@/lib/data/dork-data";
-import { ExternalLink, Trash2, Copy } from "lucide-react";
+import { ExternalLink, Trash2, Copy, Edit2 } from "lucide-react";
 import { toast } from "sonner";
 
 interface DorkListProps {
     dorks: Dork[];
     onRemoveDork: (id: string) => void;
+    onEditDork: (id: string) => void;
     onSearch: (dorks: Dork[]) => void;
 }
 
-export function DorkList({ dorks, onRemoveDork, onSearch }: DorkListProps) {
+export function DorkList({ dorks, onRemoveDork, onEditDork, onSearch }: DorkListProps) {
     const handleCopyDork = (dork: string) => {
         navigator.clipboard.writeText(dork);
         toast.success("Dork copied to clipboard!");
@@ -87,6 +88,15 @@ export function DorkList({ dorks, onRemoveDork, onSearch }: DorkListProps) {
                                         title="Copy dork"
                                     >
                                         <Copy className="w-4 h-4" />
+                                    </Button>
+                                    <Button
+                                        variant="ghost"
+                                        size="sm"
+                                        onClick={() => onEditDork(dork.id)}
+                                        className="h-9 w-9 hover:bg-blue-500/10 hover:text-blue-500"
+                                        title="Edit dork"
+                                    >
+                                        <Edit2 className="w-4 h-4" />
                                     </Button>
                                     <Button
                                         variant="ghost"
