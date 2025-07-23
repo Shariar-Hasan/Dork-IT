@@ -87,7 +87,7 @@ export default function Contact() {
                         </CardHeader>
                         <CardContent className="pb-8">
                             <Link
-                                href="/about"
+                                href="/learn"
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 hover:bg-green-500/20 text-green-600 font-medium rounded-xl transition-colors"
                             >
                                 <i className="fas fa-book"></i>

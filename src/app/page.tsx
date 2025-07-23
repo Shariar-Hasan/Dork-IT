@@ -8,10 +8,12 @@ import { LoadingSpinner } from "@/components/ui/loading-spinner";
 import { Dork } from "@/lib/data/dork-data";
 import { DorkStorage } from "@/lib/storage/dork-storage";
 import { nanoid } from "nanoid";
+import Link from "next/link";
 
 export default function Home() {
   const [dorks, setDorks] = useState<Dork[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [editingDork, setEditingDork] = useState<Dork | null>(null);
   const dorkStorage = DorkStorage.getInstance();
   const t = useTranslations('homepage');
 
@@ -51,6 +53,36 @@ export default function Home() {
     const updatedDorks = dorks.filter(dork => dork.id !== id);
     setDorks(updatedDorks);
     dorkStorage.saveDorks(updatedDorks);
+  };
+
+  const handleEditDork = (id: string) => {
+    const dorkToEdit = dorks.find(dork => dork.id === id);
+    if (dorkToEdit) {
+      setEditingDork(dorkToEdit);
+    }
+  };
+
+  const handleUpdateDork = (id: string, dorkType: string, dorkText: string) => {
+    let processedText = dorkText.trim();
+
+    // If the text contains spaces, wrap it in quotes
+    if (processedText.includes(" ")) {
+      processedText = `"${processedText}"`;
+    }
+
+    const updatedDorks = dorks.map(dork =>
+      dork.id === id
+        ? { ...dork, dork: `${dorkType}:${processedText}` }
+        : dork
+    );
+
+    setDorks(updatedDorks);
+    dorkStorage.saveDorks(updatedDorks);
+    setEditingDork(null); // Exit edit mode
+  };
+
+  const handleCancelEdit = () => {
+    setEditingDork(null);
   };
 
   const handleSearch = (dorks: Dork[]) => {
@@ -141,7 +173,12 @@ export default function Home() {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-chart-1/30 to-primary/30 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
               <div className="relative backdrop-blur-xl bg-card/60 border border-primary/20 rounded-3xl p-2 shadow-md">
                 <div className="bg-card/80 backdrop-blur-sm rounded-2xl">
-                  <DorkForm onAddDork={handleAddDork} />
+                  <DorkForm
+                    onAddDork={handleAddDork}
+                    onUpdateDork={handleUpdateDork}
+                    onCancelEdit={handleCancelEdit}
+                    editingDork={editingDork}
+                  />
                 </div>
               </div>
             </div>
@@ -154,6 +191,7 @@ export default function Home() {
                   <DorkList
                     dorks={dorks}
                     onRemoveDork={handleRemoveDork}
+                    onEditDork={handleEditDork}
                     onSearch={handleSearch}
                   />
                 </div>
@@ -233,17 +271,17 @@ export default function Home() {
             <div className="relative inline-block">
               <div className="absolute -inset-8 bg-gradient-to-r from-primary to-chart-1 rounded-full blur-3xl opacity-30 animate-pulse"></div>
               <div className="relative flex flex-col sm:flex-row gap-8 justify-center items-center">
-                <a
-                  href="/about"
+                <Link
+                  href="/learn"
                   className="group relative px-12 py-6 bg-gradient-to-r from-primary to-chart-1 text-primary-foreground font-bold text-xl rounded-2xl btn-gradient overflow-hidden transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-primary/25"
                 >
                   <span className="relative z-10 flex items-center gap-4">
                     <i className="fas fa-rocket group-hover:scale-125 transition-transform duration-300"></i>
                     {t('cta.exploreAdvanced')}
                   </span>
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="/contact"
                   className="group px-12 py-6 border-3 border-primary text-primary font-bold text-xl rounded-2xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
                 >
@@ -251,7 +289,7 @@ export default function Home() {
                     <i className="fas fa-users group-hover:scale-125 transition-transform duration-300"></i>
                     {t('cta.joinCommunity')}
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
